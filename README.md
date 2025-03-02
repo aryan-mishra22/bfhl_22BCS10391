@@ -1,4 +1,4 @@
-Objective for backend
+Objective for backend : 
 Build and deploy a REST API with one endpoint that accepts requests with both GET and POST methods. 
 POST method endpoint takes in the request (JSON) and returns the following: 
 1. Status 
