@@ -1,30 +1,44 @@
-Objective for backend : 
-Build and deploy a REST API with one endpoint that accepts requests with both GET and POST methods. 
-POST method endpoint takes in the request (JSON) and returns the following: 
-1. Status 
-2. User ID 
-3. College Email ID 
-4. College Roll Number 
-5. Array for numbers 
-6. Array for alphabets 
-GET method endpoint doesn’t take any user input, it just returns an operation_code - 
-Please refer to Annexure (A) for request/response samples 
+Bajaj Finserv Health Dev Challenge
+Project Overview
+A full-stack application built for the Bajaj Finserv Health Dev Challenge. The application processes arrays of data, separating numbers and alphabets, and finding the highest alphabet.
+Features
 
-Logic – (2 Parts) 
-1. Route: /bfhl 
-| Method: POST  
-a. Example: https://testbfhl.herokuapp.com/bfhl [POST Method] 
-b. Response should always contain your user_id (fullname_dob) in the following format 
-         i.   "user_id": {full_name_ddmmyyyy} 
-              E.g.:  "user_id”:  "john_doe_17091999" 
-c. “is_success” should be returned in the response to mark the status of operation. It can 
-be true / false
-2. Route: /bfhl  | Method: GET 
-a. Example: https://testbfhl.herokuapp.com/bfhl [GET Method] 
-b. Doesn’t take any input from the user. The endpoint will be hit with a GET request, that’s 
-it. 
-c. Expected HTTP Status Code: 200 
-d. Expected Response Body (hardcoded) (JSON): 
-           {  
-               “operation_code”:1 
-            }
+Backend REST API with GET and POST endpoints
+Frontend interface with JSON input validation
+Multi-select filtering of response data
+Responsive design
+
+Tech Stack
+
+Backend: [List your backend technologies, e.g., Node.js, Express, Python/Flask, etc.]
+Frontend: [List your frontend technologies, e.g., React, Next.js, etc.]
+Deployment: [List your hosting platforms, e.g., Heroku, Vercel, Netlify, etc.]
+
+Live Demo
+
+Backend API: [Your deployed backend URL]/bfhl
+Frontend Application: [Your deployed frontend URL]
+
+API Documentation
+GET /bfhl
+Returns a hardcoded operation code.
+Response:
+jsonCopy{
+  "operation_code": 1
+}
+POST /bfhl
+Processes an array of data, separating numbers and alphabets.
+Request Body:
+jsonCopy{
+  "data": ["M", "1", "334", "4", "B"]
+}
+Response:
+jsonCopy{
+  "is_success": true,
+  "user_id": "your_name_ddmmyyyy",
+  "email": "your_email@college.edu",
+  "roll_number": "YOUR_ROLL_NUMBER",
+  "numbers": ["1", "334", "4"],
+  "alphabets": ["M", "B"],
+  "highest_alphabet": ["M"]
+}
