@@ -20,10 +20,7 @@ i.
 E.g.:  "user_id”:  "john_doe_17091999" 
 c. “is_success” should be returned in the response to mark the status of operation. It can 
 be true / false
-2. Route: /bfhl  
- 
-| Method: GET 
-______________________ 
+2. Route: /bfhl  | Method: GET 
 a. Example: https://testbfhl.herokuapp.com/bfhl [GET Method] 
 b. Doesn’t take any input from the user. The endpoint will be hit with a GET request, that’s 
 it. 
